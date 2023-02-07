@@ -21,7 +21,7 @@ void countSort(vector<int> &v){
         freq[i]+=freq[i-1];
     }
     
-    vector<int>ans[n];
+    vector<int>ans(n);
     for(int i=n-1;i>=0;i--){
         ans[--freq[v[i]]]=v[i];
     }
